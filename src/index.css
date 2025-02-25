@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url('./fonts/Pretendard-Medium.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  -webkit-text-size-adjust: none !important;
+  -moz-text-size-adjust: none !important;
+  -ms-text-size-adjust: none !important;
+  text-size-adjust: none !important;
+}
+
+
+
+li span {
+  display: inline; 
+  margin: 0; 
+  padding: 0; 
+}
+
+ul {
+
+  padding-inline-start: 3rem;
+  margin: 0;
+
+}
+
+
+body {
+  font-family: 'Pretendard';
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: content-box;
+
+}
+
+
+@media screen and (max-width: 480px) {
+  :root, html {
+    font-size: 8px !important;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  :root, html {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  :root, html {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  :root, html {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root, html {
+    font-size: 16px !important;
+  }
+}
+
+* {
+  min-width: 0;
+  max-width: 100%;
+}
