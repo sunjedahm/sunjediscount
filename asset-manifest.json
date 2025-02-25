@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sunjedahm/static/css/main.2cd2a19e.css",
+    "main.js": "/sunjedahm/static/js/main.4271f065.js",
+    "static/js/488.47ab6d95.chunk.js": "/sunjedahm/static/js/488.47ab6d95.chunk.js",
+    "static/media/Pretendard-Medium.otf": "/sunjedahm/static/media/Pretendard-Medium.a8904df42c9b4f93a668.otf",
+    "static/media/dog_img.jpg": "/sunjedahm/static/media/dog_img.06596de031f64bfc4c41.jpg",
+    "static/media/forest_img.jpg": "/sunjedahm/static/media/forest_img.0614fa422647cbd7c64b.jpg",
+    "static/media/caravan_img.jpg": "/sunjedahm/static/media/caravan_img.8303675683b8a3a016d3.jpg",
+    "static/media/main_img.jpg": "/sunjedahm/static/media/main_img.afc0e6dfcbafec6ded56.jpg",
+    "static/media/ocean_img.jpg": "/sunjedahm/static/media/ocean_img.d64fc2be50415bb6945d.jpg",
+    "static/media/sunje.png": "/sunjedahm/static/media/sunje.af5067d5d99290bdd8c5.png",
+    "static/media/chat.png": "/sunjedahm/static/media/chat.4b0228bf3975020b1bf5.png",
+    "index.html": "/sunjedahm/index.html",
+    "main.2cd2a19e.css.map": "/sunjedahm/static/css/main.2cd2a19e.css.map",
+    "main.4271f065.js.map": "/sunjedahm/static/js/main.4271f065.js.map",
+    "488.47ab6d95.chunk.js.map": "/sunjedahm/static/js/488.47ab6d95.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cd2a19e.css",
+    "static/js/main.4271f065.js"
+  ]
+}
