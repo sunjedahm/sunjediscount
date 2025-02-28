@@ -1,32 +1,17 @@
+// App.js
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Landing from '../src/Landing/Landing';
+import Main from '../src/Main/Main';
 
-import './App.css';
-import Header from './Header/Header'
-import Body from './Body/Body'
-import styled from 'styled-components'
-import Footer from './Footer/Footer';
-
-const Container = styled.div`
-
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-
-
-`
-
-
-
-function App() {
+const App = () => {
   return (
-    
-    <Container>
-      <Header />
-      <Body />
-      <Footer />
-    </Container>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/price" element={<Main />} /> 
+      <Route path="*" element={<Landing />} /> 
+    </Routes>
   );
-}
+};
 
 export default App;
