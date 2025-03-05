@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/sunjediscount/static/css/main.7e434c96.css",
-    "main.js": "/sunjediscount/static/js/main.b525b63a.js",
-    "static/js/488.47ab6d95.chunk.js": "/sunjediscount/static/js/488.47ab6d95.chunk.js",
+    "main.css": "/sunjediscount/static/css/main.d9b0d332.css",
+    "main.js": "/sunjediscount/static/js/main.2d6c0b1a.js",
     "static/media/Pretendard-Medium.otf": "/sunjediscount/static/media/Pretendard-Medium.a8904df42c9b4f93a668.otf",
     "static/media/dog_img.jpg": "/sunjediscount/static/media/dog_img.06596de031f64bfc4c41.jpg",
     "static/media/forest_img.jpg": "/sunjediscount/static/media/forest_img.0614fa422647cbd7c64b.jpg",
@@ -11,13 +10,13 @@
     "static/media/ocean_img.jpg": "/sunjediscount/static/media/ocean_img.d64fc2be50415bb6945d.jpg",
     "static/media/sunje.png": "/sunjediscount/static/media/sunje.af5067d5d99290bdd8c5.png",
     "static/media/chat.png": "/sunjediscount/static/media/chat.4b0228bf3975020b1bf5.png",
+    "static/media/logo.png": "/sunjediscount/static/media/logo.2a88f7bef6fe360a3ccc.png",
     "index.html": "/sunjediscount/index.html",
-    "main.7e434c96.css.map": "/sunjediscount/static/css/main.7e434c96.css.map",
-    "main.b525b63a.js.map": "/sunjediscount/static/js/main.b525b63a.js.map",
-    "488.47ab6d95.chunk.js.map": "/sunjediscount/static/js/488.47ab6d95.chunk.js.map"
+    "main.d9b0d332.css.map": "/sunjediscount/static/css/main.d9b0d332.css.map",
+    "main.2d6c0b1a.js.map": "/sunjediscount/static/js/main.2d6c0b1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e434c96.css",
-    "static/js/main.b525b63a.js"
+    "static/css/main.d9b0d332.css",
+    "static/js/main.2d6c0b1a.js"
   ]
 }
