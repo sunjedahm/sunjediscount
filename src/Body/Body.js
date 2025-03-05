@@ -3,13 +3,18 @@ import RoomBox from "../RoomBox/RoomBox";
 import TitleBox from "./TitleBox";
 import ReserveInfo from "../RoomBox/ReserveInfo";
 import RoomInfo from "../RoomBox/RoomInfo";
-import data from "../source/roominformation.json";
+import Data from "../source/roominformation.json";
+import Data2 from '../source/roominformation2.json'
 import Date from "../Date/Date";
+import DateData from '../source/date.json'
+import DateData2 from '../source/date2.json'
 import Title from "./Title";
 import caravan from '../source/caravan_img.jpg'
 import forest from '../source/forest_img.jpg'
 import ocean from '../source/ocean_img.jpg'
 import pet from '../source/dog_img.jpg'
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Container = styled.div`
   width: 70rem;
@@ -81,6 +86,22 @@ const RightBox = styled.div`
 // `
 
 const Body = () => {
+  const location = useLocation();
+  const { month } = location.state || {};
+
+  const [data, setData] = useState(Data)
+  const [date, setDate] = useState(DateData);
+
+  useEffect(() => {
+    const fetchedData = month === 'mar' ? Data : Data2;
+    const fetchedDate = month === 'mar' ? DateData : DateData2;
+    setData(fetchedData);
+    setDate(fetchedDate);
+
+  }, [month]); 
+
+  console.log(data[0])
+
   return (
     <>
       <Container>
@@ -90,7 +111,7 @@ const Body = () => {
         <Row height="10rem">
           <LeftBox height="10rem">혜택 기간</LeftBox>
           <RightBox height="10rem">
-            <Date />
+            <Date date={date}/>
           </RightBox>
         </Row>
 
@@ -128,7 +149,7 @@ const Body = () => {
         <Row height="17rem">
           <LeftBox height="17rem">유의 사항</LeftBox>
           <RightBox height="17rem">
-            <RoomInfo />
+            <RoomInfo date={date} />
           </RightBox>
         </Row>
 

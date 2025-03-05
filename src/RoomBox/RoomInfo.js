@@ -14,13 +14,13 @@ const Info = styled.div`
   color: red;
 `;
 
-const RoomInfo = () => {
+const RoomInfo = ({date}) => {
   return (
     <Container>
       <ul>
         <li>
-          해당 프로모션은 {data.start} - {data.end} 기간 체크인 시, 이용
-          가능합니다. <br /> <Info>{data.holiday2}</Info>
+          해당 프로모션은 {date.start} - {date.end} 기간 체크인 시, 이용
+          가능합니다. <br /> <Info>{date.holiday2}</Info>
         </li>
         <li>
           반려동물 동반은 '펫 글램핑' 예약 시에만 가능합니다. 펫 글램핑 객실을

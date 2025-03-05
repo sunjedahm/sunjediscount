@@ -1,4 +1,4 @@
-import data from "../source/date.json";
+
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -38,18 +38,18 @@ justify-content: center;
 `
 
 
-const Date = () => {
+const Date = ({date}) => {
   return (
     <Container>
       <Text>
-        {data.start} - {data.end}
+        {date.start} - {date.end}
       </Text>
       <br />
       <Alert>
-        {data.holiday}
+        {date.holiday}
       </Alert>
       <Alert>
-        {data.holiday2}
+        {date.holiday2}
       </Alert>
     </Container>
   );

@@ -60,26 +60,26 @@ const RightBox = styled.div`
 const Landing = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
-    navigate("/price");
+  const handleNavigation = (month) => {
+    navigate("/price", {state: {month}});
   };
 
   return (
     <Container>
       <Logo src={logo} />
       <TitleBox />
-      <Button onClick={handleNavigation}>
+      <Button onClick={()=>handleNavigation("mar")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>3월 혜택가 확인하기</RightBox>
       </Button>
-      {/* <Button onClick={handleNavigation}>
+      <Button onClick={()=>handleNavigation("apr")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>4월 혜택가 확인하기</RightBox>
-      </Button> */}
+      </Button>
     </Container>
   );
 };
