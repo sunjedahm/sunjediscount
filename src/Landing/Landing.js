@@ -74,12 +74,12 @@ const Landing = () => {
         </LeftBox>
         <RightBox>3월 혜택가 확인하기</RightBox>
       </Button>
-      <Button onClick={handleNavigation}>
+      {/* <Button onClick={handleNavigation}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>4월 혜택가 확인하기</RightBox>
-      </Button>
+      </Button> */}
     </Container>
   );
 };

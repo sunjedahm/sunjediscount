@@ -82,7 +82,7 @@ const ResrveInfo = () => {
 
         </TalkButton>
       </ButtonContainer>
-      에약 절차
+      예약 절차
       <ul>
         <li>예약 시 재직 중인 회사를 알려주시기 바랍니다.</li>
         <li>
