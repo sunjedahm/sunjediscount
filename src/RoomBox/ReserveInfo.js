@@ -78,7 +78,7 @@ const ResrveInfo = () => {
         <TalkButton onClick={() => handleClick("https://talk.naver.com/ct/w4kb8o4?frm=mnmb&frm=nmb_detail#nafullscreen")}> 
 
           <TalkImage src={chatimage} />
-          <TalkText>네이버 톡톡 문의하기</TalkText>
+          <TalkText>네이버 톡톡 문의</TalkText>
 
         </TalkButton>
       </ButtonContainer>
