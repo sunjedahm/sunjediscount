@@ -68,17 +68,17 @@ const Landing = () => {
     <Container>
       <Logo src={logo} />
       <TitleBox />
-      <Button onClick={()=>handleNavigation("mar")}>
-        <LeftBox>
-          <MiniLogo src={minilogo} />
-        </LeftBox>
-        <RightBox>3월 혜택가 확인하기</RightBox>
-      </Button>
       <Button onClick={()=>handleNavigation("apr")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>4월 혜택가 확인하기</RightBox>
+      </Button>
+      <Button onClick={()=>handleNavigation("may")}>
+        <LeftBox>
+          <MiniLogo src={minilogo} />
+        </LeftBox>
+        <RightBox>5월 혜택가 확인하기</RightBox>
       </Button>
     </Container>
   );

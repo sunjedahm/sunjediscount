@@ -93,8 +93,8 @@ const Body = () => {
   const [date, setDate] = useState(DateData);
 
   useEffect(() => {
-    const fetchedData = month === 'mar' ? Data : Data2;
-    const fetchedDate = month === 'mar' ? DateData : DateData2;
+    const fetchedData = month === 'apr' ? Data2 : Data;
+    const fetchedDate = month === 'apr' ? DateData2 : DateData;
     setData(fetchedData);
     setDate(fetchedDate);
 

@@ -27,16 +27,12 @@ const LinkBox = styled.div`
 `;
 
 const LinkText1 = styled.div`
-
-cursor: pointer;
-
-`
+  cursor: pointer;
+`;
 
 const LinkText2 = styled.div`
-
-cursor: pointer;
-
-`
+  cursor: pointer;
+`;
 
 const LeftBox = styled.div`
   width: 20rem;
@@ -134,6 +130,9 @@ const RoomBox = ({ data }) => {
               <del>정가: KRW {data.orignprice}</del>
             </Original>
             <Price>할인가: KRW {data.price}</Price>
+            <Price>
+              {data.eprice.length > 1 ? `토요일 할인가: KRW ${data.eprice}` : null}
+            </Price>
           </UpperBox>
           <LowerBox>
             <Special>{data.special}</Special>
@@ -141,8 +140,17 @@ const RoomBox = ({ data }) => {
         </RightBox>
       </InfoBox>
       <LinkBox>
-      <LinkText1 onClick={() => handleClick(data.link)}>[{data.title1} 정보 바로 가기]</LinkText1>
-      {data.link2 != null ? <LinkText2  onClick={() => handleClick(data.link2)}> &nbsp; &nbsp; [{data.title2} 정보 바로 가기] </LinkText2> : <></>}
+        <LinkText1 onClick={() => handleClick(data.link)}>
+          [{data.title1} 정보 바로 가기]
+        </LinkText1>
+        {data.link2 != null ? (
+          <LinkText2 onClick={() => handleClick(data.link2)}>
+            {" "}
+            &nbsp; &nbsp; [{data.title2} 정보 바로 가기]{" "}
+          </LinkText2>
+        ) : (
+          <></>
+        )}
       </LinkBox>
     </Container>
   );
