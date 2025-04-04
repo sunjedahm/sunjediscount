@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 40rem;
-  height: 8rem;
+  height: 10rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-
   align-items: center;
 `;
 
 const InfoBox = styled.div`
   width: 40rem;
-  height: 6rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +19,7 @@ const InfoBox = styled.div`
 
 const LinkBox = styled.div`
   width: 35rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   color: red;
@@ -36,18 +36,20 @@ const LinkText2 = styled.div`
 
 const LeftBox = styled.div`
   width: 20rem;
-  height: 6rem;
+  height: 8rem;
   text-align: left;
   display: flex;
   flex-direction: column;
+  background-color: blue;
 `;
 
 const RightBox = styled.div`
   width: 15rem;
-  height: 6rem;
+  height: 8rem;
   text-align: right;
   display: flex;
   flex-direction: column;
+  background-color: red;
 `;
 
 const Title = styled.div`
@@ -56,7 +58,7 @@ const Title = styled.div`
 `;
 
 const UpperBox = styled.div`
-  height: 4rem;
+  height: 6rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -131,7 +133,9 @@ const RoomBox = ({ data }) => {
             </Original>
             <Price>할인가: KRW {data.price}</Price>
             <Price>
-              {data.eprice.length > 1 ? `토요일 할인가: KRW ${data.eprice}` : null}
+              {data.eprice.length > 1
+                ? `토요일 할인가: KRW ${data.eprice}`
+                : null}
             </Price>
           </UpperBox>
           <LowerBox>
