@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const InfoBox = styled.div`
   width: 40rem;
-  height: 8rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,20 +36,21 @@ const LinkText2 = styled.div`
 
 const LeftBox = styled.div`
   width: 20rem;
-  height: 8rem;
+  height: ${(props) => (props.isEprice ? "6rem" : "5rem")};
   text-align: left;
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  gap: 0.7rem;
 `;
 
 const RightBox = styled.div`
   width: 15rem;
-  height: 8rem;
+  height: ${(props) => (props.isEprice ? "6rem" : "5rem")};
   text-align: right;
   display: flex;
   flex-direction: column;
-  background-color: red;
+
+  justify-content: space-between;
 `;
 
 const Title = styled.div`
@@ -57,19 +58,10 @@ const Title = styled.div`
   font-weight: 600;
 `;
 
-const UpperBox = styled.div`
-  height: 6rem;
-  width: 100%;
+const PriceBox = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-`;
-
-const LowerBox = styled.div`
-  height: 2rem;
-  display: flex;
-  width: 100%;
-  text-align: right;
+  gap: 0.3rem;
 `;
 
 const Cap = styled.div`
@@ -81,7 +73,6 @@ const Cap = styled.div`
 const Room = styled.div`
   display: flex;
   width: 20rem;
-  align-items: top;
   justify-content: left;
   font-size: 0.9rem;
 `;
@@ -91,7 +82,7 @@ const Original = styled.div`
 `;
 
 const Price = styled.div`
-  color: #ed7969;
+  color: ${(props)=>(props.colour)};
 `;
 
 const Special = styled.div`
@@ -113,34 +104,29 @@ const RoomBox = ({ data }) => {
   return (
     <Container>
       <InfoBox>
-        <LeftBox>
-          <UpperBox>
-            <Title>{data.title}</Title>
-            <Cap>
-              (기준 {data.cap}인 / 최대 {data.maxcap}인)
-            </Cap>
-          </UpperBox>
-          <LowerBox>
-            <Room>
-              방구성: ({data.size}): 퀸 사이즈 침대 {data.bed}, 욕실 {data.bath}
-            </Room>
-          </LowerBox>
+        <LeftBox isEprice={data.eprice.length > 1}>
+          <Title>{data.title}</Title>
+          <Cap>
+            (기준 {data.cap}인 / 최대 {data.maxcap}인)
+          </Cap>
+
+          <Room>
+            방구성: ({data.size}): 퀸 사이즈 침대 {data.bed}, 욕실 {data.bath}
+          </Room>
         </LeftBox>
-        <RightBox>
-          <UpperBox>
+        <RightBox isEprice={data.eprice.length > 1}>
+          <PriceBox>
             <Original>
               <del>정가: KRW {data.orignprice}</del>
             </Original>
-            <Price>할인가: KRW {data.price}</Price>
-            <Price>
+            <Price colour="#ed7969">평일(일-금): KRW {data.price}</Price>
+            <Price colour="#183425">
               {data.eprice.length > 1
-                ? `토요일 할인가: KRW ${data.eprice}`
+                ? `토요일 : KRW ${data.eprice}`
                 : null}
             </Price>
-          </UpperBox>
-          <LowerBox>
-            <Special>{data.special}</Special>
-          </LowerBox>
+          </PriceBox>
+          <Special>{data.special}</Special>
         </RightBox>
       </InfoBox>
       <LinkBox>

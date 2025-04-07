@@ -1,4 +1,4 @@
-import data from "../source/date.json";
+
 import styled from "styled-components";
 
 const Container = styled.div`
