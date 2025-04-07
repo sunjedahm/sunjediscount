@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -14,7 +13,7 @@ const Info = styled.div`
   color: red;
 `;
 
-const RoomInfo = ({date}) => {
+const RoomInfo = ({ date }) => {
   return (
     <Container>
       <ul>
@@ -28,7 +27,8 @@ const RoomInfo = ({date}) => {
         </li>
         <li>일반 객실 체크인 시간은 15:00, 체크아웃 시간은 11:00입니다 </li>
         <li>
-          24시간 이용 객실 체크인 시간은 18:00, 체크아웃 시간은 18:00입니다{" "}
+          24시간 이용 객실은 일요일부터 목요일까지 예약 가능하며, 체크인은
+          18:00, 체크아웃은 익일 18:00입니다.{" "}
         </li>
         <li>
           객실별 기준 인원 외 추가 인원은 예약 시 반드시 기재 바라며, 추가
