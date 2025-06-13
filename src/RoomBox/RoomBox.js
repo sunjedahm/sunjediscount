@@ -82,7 +82,7 @@ const Original = styled.div`
 `;
 
 const Price = styled.div`
-  color: ${(props)=>(props.colour)};
+  color: ${(props) => props.colour};
 `;
 
 const Special = styled.div`
@@ -100,7 +100,10 @@ const handleClick = (link) => {
   }
 };
 
-const RoomBox = ({ data }) => {
+const RoomBox = ({ data, month }) => {
+  const normal = ["평일(일-금)", "토요일"];
+  const peak = ["일반", "성수기"];
+
   return (
     <Container>
       <InfoBox>
@@ -120,14 +123,14 @@ const RoomBox = ({ data }) => {
               <del>정가: KRW {data.orignprice}</del>
             </Original>
             <Price colour="#ed7969">
-            {data.eprice.length > 1
-                ? ` 평일(일-금): KRW ${data.price}`
-                :  `금액: KRW ${data.price}`}
-    </Price>
+              {month === "jun"
+                ? ` ${normal[0]}: KRW ${data.price}`
+                : `${peak[0]}: KRW ${data.price}`}
+            </Price>
             <Price colour="#183425">
-              {data.eprice.length > 1
-                ? `토요일 : KRW ${data.eprice}`
-                : null}
+              {month === "jun"
+                ? `${normal[1]} : KRW ${data.eprice}`
+                : `${peak[1]}: KRW ${data.eprice}`}
             </Price>
           </PriceBox>
           <Special>{data.special}</Special>

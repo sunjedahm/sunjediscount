@@ -73,6 +73,15 @@ const RightBox = styled.div`
   box-sizing: border-box;
 `;
 
+const EmptyBox = styled.div`
+
+height: 2.5rem;
+
+
+`
+
+
+
 // const Add = styled.div`
 
 // height: 1.5rem;
@@ -93,8 +102,8 @@ const Body = () => {
   const [date, setDate] = useState(DateData);
 
   useEffect(() => {
-    const fetchedData = month === 'may' ? Data : Data2;
-    const fetchedDate = month === 'may' ? DateData : DateData2;
+    const fetchedData = month === 'jul' ? Data : Data2;
+    const fetchedDate = month === 'jul' ? DateData : DateData2;
     setData(fetchedData);
     setDate(fetchedDate);
 
@@ -105,7 +114,10 @@ const Body = () => {
   return (
     <>
       <Container>
-        <TitleBox />
+
+        <EmptyBox />
+        <TitleBox text="감성 럭셔리 리조트 선재담이 제휴사 고객님을 위해 특별한 혜택을 마련했습니다." />
+        <EmptyBox />
 
         <Hr width="55rem" />
         <Row height="10rem">
@@ -121,28 +133,28 @@ const Body = () => {
             <Title text="CARAVAN" />
 
             <Image src={caravan}/>
-            <RoomBox key="0" data={data[0]} />
-            <RoomBox key="1" data={data[1]} />
+            <RoomBox key="0" data={data[0]} month={month} />
+            <RoomBox key="1" data={data[1]} month={month}/>
 
             <Hr width="40rem" />
             <Title text="PARK & FOREST GLAMPING" />
             <Image src={forest}/>
-            <RoomBox key="2" data={data[2]} />
-            <RoomBox key="3" data={data[3]} />
-            <RoomBox key="5" data={data[4]} />
+            <RoomBox key="2" data={data[2]} month={month}/>
+            <RoomBox key="3" data={data[3]} month={month}/>
+            <RoomBox key="5" data={data[4]} month={month}/>
 
             <Hr width="40rem" />
             <Title text="PET GLAMPING" />
 
             <Image src={pet}/>
-            <RoomBox key="6" data={data[5]} />
+            <RoomBox key="6" data={data[5]} month={month}/>
 
             <Hr width="40rem" />
             <Title text="OCEAN VIEW GLAMPING" />
             <Image src={ocean}/>
-            <RoomBox key="7" data={data[6]} />
-            <RoomBox key="8" data={data[7]} />
-            <RoomBox key="9" data={data[8]} />
+            <RoomBox key="7" data={data[6]} month={month}/>
+            <RoomBox key="8" data={data[7]} month={month}/>
+            <RoomBox key="9" data={data[8]} month={month}/>
           </RightBox>
         </Row>
 
