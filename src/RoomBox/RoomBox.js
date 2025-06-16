@@ -123,14 +123,14 @@ const RoomBox = ({ data, month }) => {
               <del>정가: KRW {data.orignprice}</del>
             </Original>
             <Price colour="#ed7969">
-              {month === "jun"
-                ? ` ${normal[0]}: KRW ${data.price}`
-                : `${peak[0]}: KRW ${data.price}`}
+              {data.eprice.length > 1
+                ? ` 평일(일-금): KRW ${data.price}`
+                : `금액: KRW ${data.price}`}
             </Price>
             <Price colour="#183425">
-              {month === "jun"
-                ? `${normal[1]} : KRW ${data.eprice}`
-                : `${peak[1]}: KRW ${data.eprice}`}
+              {data.eprice.length > 1
+                ? ` 토요일: KRW ${data.price}`
+                : null}
             </Price>
           </PriceBox>
           <Special>{data.special}</Special>

@@ -20,7 +20,7 @@ const Logo = styled.img`
 `;
 
 const Button = styled.div`
-  width: 20rem;
+  width: 24rem;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ const LeftBox = styled.div`
 `;
 
 const RightBox = styled.div`
-  width: 15rem;
+  width: 19rem;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@ const Landing = () => {
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
-        <RightBox>7~8월 혜택가 확인하기</RightBox>
+        <RightBox>7월 1일 ~ 7월 15일 혜택가 확인하기</RightBox>
       </Button>
     </Container>
   );
