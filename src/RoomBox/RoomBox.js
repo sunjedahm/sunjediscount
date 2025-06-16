@@ -101,8 +101,6 @@ const handleClick = (link) => {
 };
 
 const RoomBox = ({ data, month }) => {
-  const normal = ["평일(일-금)", "토요일"];
-  const peak = ["일반", "성수기"];
 
   return (
     <Container>

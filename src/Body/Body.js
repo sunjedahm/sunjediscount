@@ -4,15 +4,18 @@ import TitleBox from "./TitleBox";
 import ReserveInfo from "../RoomBox/ReserveInfo";
 import RoomInfo from "../RoomBox/RoomInfo";
 import Data from "../source/roominformation.json";
-import Data2 from '../source/roominformation2.json'
+import Data2 from "../source/roominformation2.json";
+import Data3 from "../source/roominformation3.json";
 import Date from "../Date/Date";
-import DateData from '../source/date.json'
-import DateData2 from '../source/date2.json'
+import DateData from "../source/date.json";
+import DateData2 from "../source/date2.json";
+import DateData3 from "../source/date3.json";
+import DateData4 from "../source/date4.json";
 import Title from "./Title";
-import caravan from '../source/caravan_img.jpg'
-import forest from '../source/forest_img.jpg'
-import ocean from '../source/ocean_img.jpg'
-import pet from '../source/dog_img.jpg'
+import caravan from "../source/caravan_img.jpg";
+import forest from "../source/forest_img.jpg";
+import ocean from "../source/ocean_img.jpg";
+import pet from "../source/dog_img.jpg";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -74,13 +77,8 @@ const RightBox = styled.div`
 `;
 
 const EmptyBox = styled.div`
-
-height: 2.5rem;
-
-
-`
-
-
+  height: 2.5rem;
+`;
 
 // const Add = styled.div`
 
@@ -98,23 +96,33 @@ const Body = () => {
   const location = useLocation();
   const { month } = location.state || {};
 
-  const [data, setData] = useState(Data)
+  const dataMap = {
+    jul: Data,
+    jun: Data2,
+    jul2: Data3,
+    aug: Data,
+  };
+
+  const dateMap = {
+    jul: DateData,
+    jun: DateData2,
+    jul2: DateData3,
+    aug: DateData4,
+  };
+
+  const [data, setData] = useState(Data);
   const [date, setDate] = useState(DateData);
 
   useEffect(() => {
-    const fetchedData = month === 'jul' ? Data : Data2;
-    const fetchedDate = month === 'jul' ? DateData : DateData2;
-    setData(fetchedData);
-    setDate(fetchedDate);
+    setData(dataMap[month] || Data);
+    setDate(dateMap[month] || DateData);
+  }, [month]);
 
-  }, [month]); 
-
-  console.log(data[0])
+  console.log(data[0]);
 
   return (
     <>
       <Container>
-
         <EmptyBox />
         <TitleBox text="감성 럭셔리 리조트 선재담이 제휴사 고객님을 위해 특별한 혜택을 마련했습니다." />
         <EmptyBox />
@@ -123,7 +131,7 @@ const Body = () => {
         <Row height="10rem">
           <LeftBox height="10rem">혜택 기간</LeftBox>
           <RightBox height="10rem">
-            <Date date={date}/>
+            <Date date={date} />
           </RightBox>
         </Row>
 
@@ -132,29 +140,29 @@ const Body = () => {
           <RightBox height="160rem">
             <Title text="CARAVAN" />
 
-            <Image src={caravan}/>
+            <Image src={caravan} />
             <RoomBox key="0" data={data[0]} month={month} />
-            <RoomBox key="1" data={data[1]} month={month}/>
+            <RoomBox key="1" data={data[1]} month={month} />
 
             <Hr width="40rem" />
             <Title text="PARK & FOREST GLAMPING" />
-            <Image src={forest}/>
-            <RoomBox key="2" data={data[2]} month={month}/>
-            <RoomBox key="3" data={data[3]} month={month}/>
-            <RoomBox key="5" data={data[4]} month={month}/>
+            <Image src={forest} />
+            <RoomBox key="2" data={data[2]} month={month} />
+            <RoomBox key="3" data={data[3]} month={month} />
+            <RoomBox key="5" data={data[4]} month={month} />
 
             <Hr width="40rem" />
             <Title text="PET GLAMPING" />
 
-            <Image src={pet}/>
-            <RoomBox key="6" data={data[5]} month={month}/>
+            <Image src={pet} />
+            <RoomBox key="6" data={data[5]} month={month} />
 
             <Hr width="40rem" />
             <Title text="OCEAN VIEW GLAMPING" />
-            <Image src={ocean}/>
-            <RoomBox key="7" data={data[6]} month={month}/>
-            <RoomBox key="8" data={data[7]} month={month}/>
-            <RoomBox key="9" data={data[8]} month={month}/>
+            <Image src={ocean} />
+            <RoomBox key="7" data={data[6]} month={month} />
+            <RoomBox key="8" data={data[7]} month={month} />
+            <RoomBox key="9" data={data[8]} month={month} />
           </RightBox>
         </Row>
 
