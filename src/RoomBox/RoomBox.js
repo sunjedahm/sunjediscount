@@ -127,7 +127,7 @@ const RoomBox = ({ data, month }) => {
             </Price>
             <Price colour="#183425">
               {data.eprice.length > 1
-                ? ` 토요일: KRW ${data.price}`
+                ? ` 토요일: KRW ${data.eprice}`
                 : null}
             </Price>
           </PriceBox>
