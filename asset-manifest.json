@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sunjediscount/static/css/main.d9b0d332.css",
-    "main.js": "/sunjediscount/static/js/main.d7477848.js",
+    "main.js": "/sunjediscount/static/js/main.acb18d9c.js",
     "static/media/Pretendard-Medium.otf": "/sunjediscount/static/media/Pretendard-Medium.a8904df42c9b4f93a668.otf",
     "static/media/dog_img.jpg": "/sunjediscount/static/media/dog_img.06596de031f64bfc4c41.jpg",
     "static/media/forest_img.jpg": "/sunjediscount/static/media/forest_img.0614fa422647cbd7c64b.jpg",
@@ -13,10 +13,10 @@
     "static/media/logo.png": "/sunjediscount/static/media/logo.2a88f7bef6fe360a3ccc.png",
     "index.html": "/sunjediscount/index.html",
     "main.d9b0d332.css.map": "/sunjediscount/static/css/main.d9b0d332.css.map",
-    "main.d7477848.js.map": "/sunjediscount/static/js/main.d7477848.js.map"
+    "main.acb18d9c.js.map": "/sunjediscount/static/js/main.acb18d9c.js.map"
   },
   "entrypoints": [
     "static/css/main.d9b0d332.css",
-    "static/js/main.d7477848.js"
+    "static/js/main.acb18d9c.js"
   ]
 }
