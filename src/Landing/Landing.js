@@ -70,12 +70,12 @@ const Landing = () => {
       <TitleBox text="감성 럭셔리 리조트 선재담이 제휴사 고객님을 위해 특별한 혜택을 마련했습니다." />
       <TitleBox text="※ 단체 워크숍 문의는 032-880-9903" />
       <br />
-      <Button onClick={() => handleNavigation("jun")}>
+      {/* <Button onClick={() => handleNavigation("jun")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>6월 혜택가 확인하기</RightBox>
-      </Button>
+      </Button> */}
       <Button onClick={() => handleNavigation("jul")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
