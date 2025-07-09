@@ -122,12 +122,12 @@ const RoomBox = ({ data, month }) => {
             </Original>
             <Price colour="#ed7969">
               {data.eprice.length > 1
-                ? ` 평일(일-금): KRW ${data.price}`
+                ? ` 평일(일-목): KRW ${data.price}`
                 : `금액: KRW ${data.price}`}
             </Price>
             <Price colour="#183425">
               {data.eprice.length > 1
-                ? ` 토요일: KRW ${data.eprice}`
+                ? ` 주말(금-토): KRW ${data.eprice}`
                 : null}
             </Price>
           </PriceBox>
