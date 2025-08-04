@@ -97,14 +97,14 @@ const Body = () => {
   const { month } = location.state || {};
 
   const dataMap = {
-    jul: Data,
+    sep: Data,
     jun: Data2,
     jul2: Data3,
     aug: Data,
   };
 
   const dateMap = {
-    jul: DateData,
+    sep: DateData,
     jun: DateData2,
     jul2: DateData3,
     aug: DateData4,

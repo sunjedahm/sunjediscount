@@ -28,12 +28,28 @@ font-size: 1.2rem;
 const Alert = styled.div`
 width: 39rem;
 color: red;
+font-size: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 0.2rem;
+
+`
+const Alert2 = styled.div`
+width: 39rem;
+color: red;
 font-size: 0.9rem;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
+`
+
+const Space = styled.div`
+
+height: 0.5rem;
 
 `
 
@@ -44,13 +60,13 @@ const Date = ({date}) => {
       <Text>
         {date.start} - {date.end}
       </Text>
-      <br />
       <Alert>
         {date.holiday}
       </Alert>
-      <Alert>
+      <Space />
+      <Alert2>
         {date.holiday2}
-      </Alert>
+      </Alert2>
     </Container>
   );
 };

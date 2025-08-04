@@ -76,13 +76,7 @@ const Landing = () => {
         </LeftBox>
         <RightBox>6월 혜택가 확인하기</RightBox>
       </Button> */}
-      <Button onClick={() => handleNavigation("jul")}>
-        <LeftBox>
-          <MiniLogo src={minilogo} />
-        </LeftBox>
-        <RightBox>7월 1일 ~ 7월 25일 혜택가 확인하기</RightBox>
-      </Button>
-            <Button onClick={() => handleNavigation("jul2")}>
+      <Button onClick={() => handleNavigation("jul2")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
@@ -93,6 +87,12 @@ const Landing = () => {
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>8월 17일 ~ 8월 31일 혜택가 확인하기</RightBox>
+      </Button>
+            <Button onClick={() => handleNavigation("sep")}>
+        <LeftBox>
+          <MiniLogo src={minilogo} />
+        </LeftBox>
+        <RightBox>9월 ~ 10월 혜택가 확인하기</RightBox>
       </Button>
     </Container>
   );

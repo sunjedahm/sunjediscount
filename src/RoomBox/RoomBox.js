@@ -101,7 +101,6 @@ const handleClick = (link) => {
 };
 
 const RoomBox = ({ data, month }) => {
-
   return (
     <Container>
       <InfoBox>
@@ -116,7 +115,7 @@ const RoomBox = ({ data, month }) => {
           </Room>
         </LeftBox>
         <RightBox isEprice={data.eprice.length > 1}>
-          <PriceBox>
+          {/* <PriceBox>
             <Original>
               <del>정가: KRW {data.orignprice}</del>
             </Original>
@@ -129,6 +128,21 @@ const RoomBox = ({ data, month }) => {
               {data.eprice.length > 1
                 ? ` 주말(금-토): KRW ${data.eprice}`
                 : null}
+            </Price>
+          </PriceBox> */}
+          <PriceBox>
+            <Original>
+              <del>정가: KRW {data.orignprice}</del>
+            </Original>
+            <Price colour="#ed7969">
+              {month != 'jun'
+                ? ` 평일(일-목): KRW ${data.price}`
+                : `평일(일-금): KRW ${data.price}`}
+            </Price>
+            <Price colour="#183425">
+              {month != 'sep'
+                ? ` 주말(금-토): KRW ${data.eprice}`
+                : ` 토요일: KRW ${data.eprice}`}
             </Price>
           </PriceBox>
           <Special>{data.special}</Special>
