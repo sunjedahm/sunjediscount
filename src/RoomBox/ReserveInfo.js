@@ -55,6 +55,17 @@ justify-content: center;
 
 
 `
+const BoldContainer = styled.div`
+
+
+`
+
+
+const Bold = styled.span`
+
+color: #ed7969;
+
+`
 
 const handleClick = (link) => {
   if (link) {
@@ -66,7 +77,9 @@ const handleClick = (link) => {
 const ResrveInfo = () => {
   return (
     <Container>
-      예약 문의: 평일 10:00-18:00에 상담 가능합니다.
+      <BoldContainer>
+      예약 문의: <Bold><b>평일 10:00-18:00</b></Bold>에 상담 가능합니다.
+      </BoldContainer>
       <ul>
         <li>전화 010-7683-6220으로 예약하실 수 있습니다.</li>
         <li>이메일 info@sunjedahm.com으로 예약하실 수 있습니다. </li>
