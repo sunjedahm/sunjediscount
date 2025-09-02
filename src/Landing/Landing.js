@@ -82,12 +82,12 @@ const Landing = () => {
         </LeftBox>
         <RightBox>7월 26일 ~ 8월 16일 혜택가 확인하기</RightBox>
       </Button> */}
-            <Button onClick={() => handleNavigation("aug")}>
+            {/* <Button onClick={() => handleNavigation("aug")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
         </LeftBox>
         <RightBox>8월 17일 ~ 8월 31일 혜택가 확인하기</RightBox>
-      </Button>
+      </Button> */}
             <Button onClick={() => handleNavigation("sep")}>
         <LeftBox>
           <MiniLogo src={minilogo} />
